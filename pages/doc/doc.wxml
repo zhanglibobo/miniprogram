@@ -1,0 +1,22 @@
+<!--pages/doc/doc.wxml-->
+<!-- 声明式导航 -->
+<text>pages/doc/doc.wxml</text>
+<navigator url="/pages/componentself/componentself" open-type="switchTab">导航到消息页面</navigator>
+<navigator url="/pages/info/info" open-type="navigate">导航到info页面</navigator>
+<!-- 只能后退到导航页面，不能用在tabbar页面 -->
+<navigator open-type="navigateBack" delta="1">返回上一页</navigator>
+<view>{{m1.toUpper(username)}}</view>
+<view>{{m2.toStr(username)}}</view>
+
+<!-- 编程式导航 -->
+<button bindtap="goComponentself">跳转到消息页面</button>
+<button bindtap="goInfo">跳转到info页面</button>
+<button bindtap="goBack">后退</button>
+<view wx:for="{{colorList}}" wx:key="index" class="color" style="background-color: rgba({{item}});">{{item}}</view>
+
+<wxs module="m1">
+   module.exports.toUpper = function(str){
+       return str.toUpperCase()
+   }  
+</wxs>
+<wxs module="m2" src="../../utils/tools.wxs"></wxs>

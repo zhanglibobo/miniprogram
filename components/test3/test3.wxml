@@ -1,0 +1,4 @@
+<!--components/test3/test3.wxml-->
+<text>components/test3/test3.wxml</text>
+<view>子组件{{count}}</view>
+<button bindtap="addCount" data-num="{{5}}">子组件更改cont</button>

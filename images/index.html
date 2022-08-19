@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>小程序</title>
+</head>
+
+<body>
+  https://api-hmugo-web.itheima.net/api/public/v1/home/swiperdata
+  事件传参 data-name="R" e.target.dataset.name;
+  Mobx【img图】
+  <script>
+    /* 小程序启动过程 */
+    // 1、把小程序的代码包下载到本地
+    // 2、解析app.json全局配置文件
+    // 3、执行app.js小程序入口文件，调用App()创建小程序实例
+    // 4、渲染小程序首页
+    // 5、小程序启动完成
+
+    /* 小程序页面的渲染过程 */
+    // 1、加载解析页面的.json配置文件
+    // 2、加载页面的.wxml模板和.wxss样式
+    // 3、执行页面的.js文件，调用Page()创建页面实例
+    // 4、页面渲染完成
+
+    // 关于跨域和Ajax的说明
+    // 1、跨域只存在于基于浏览器的web开发中，由于小程序的宿主环境不是浏览器，而是微信客户端，所以下程序中不存在跨域问题
+    // 2、Ajax技术的核心是依赖于浏览器中的XMLHttpRequest这个对象，小程序中不能叫做‘发起Ajax请求’，而是叫做‘发起网络数据请求’
+
+    // 关闭页面被索引 project.config.json=>"setting":{"checkSiteMap":false}
+    // bindtap="fn" bindinput="fn" 
+    // <block>标签不渲染
+
+    // 生命周期：
+    // 1、应用生命周期：App({})中
+    // 特指小程序启动 => 运行 => 销毁的过程
+    //  onLaunch (// 小程序初始化完成时，执行此函数，全局只触发一次，可以做一些初始化的工作) 
+    //  onShow（小程序启动，或从后台进入前台显示时触发） 
+    //  onHide 小程序从前台进入后台时触发）
+    // 2、页面生命周期  Page({})
+    // 特质小程序中，每个页面的加载 => 渲染 => 销毁的过程
+    // 小程序启动=》A页面的生命周期=》B页面的生命周期=》etc.=》小程序结束
+    // onLoad(){} // 页面加载，一个页面只调用一次
+    // onShow(){} // 监听页面显示
+    // onReady(){} // 监听页面初次渲染完成，一个页面只调用一次 --对界面内容进行设置wx.setNavigationBarTitle
+    // onHide(){} // 监听页面隐藏
+    // onUnload(){} // 监听页面卸载，一个页面只调用一次
+    // 3、组件的生命周期  Component({ lifetimes : {attached(){}} })    Behavior({})构造器没有error生命周期，behavior只能在组件中引入
+    // ---- created(){} // 组件实例被创建时执行 ，不能调用setData({})
+    // ---- attached(){} // 在组件实例进入页面节点树, 初始化工作写在这里
+    // ready(){} // 在组件在视图层布局完成后执行
+    // moved(){} // 在组件实例被移动到节点树另一个位置时执行
+    // ---- detached(){} // 在组件实例被从页面节点树移除时执行，清理工作写在这里
+    // error(){} // 每当组件方法抛出错误时执行
+    // 4、组件在页面的生命周期 Component({ pageLifetimes : {show(){}} })
+    // show(){}  页面被展示
+    // hide(){}  页面被隐藏
+    // resize(size){} 页面尺寸变化
+
+    // wxs 数据类型
+    // number、string、boolean、object、function、array、date、regexp
+    // 不支持 类似于es6及以上的语法形式
+    // wxs遵循commonjs规范，module对象，require()函数，module.exports对象
+    // 隔离性------
+    // 1、不能调用js中定义的函数，2、不能调用小程序提供的api (不能作为组件的事件回调函数)
+
+    // 组件和页面的区别
+    // 1、组件的.json文件中需要声明"component":true属性
+    // 2、组件的.js文件中调用的是Component()函数
+    // 3、组件的事件处理函数需要定义到methods节点中
+
+    // 组件样式隔离的注意点
+    // app.wxss中的全局样式对组件无效
+    // 只有class选择器会有样式隔离效果，id选择器、属性选择器、标签选择器不受样式隔离的影响
+    // 在组件和引用组件的页面中建议使用class选择器
+    // js文件中：   component({options:{styleIsolation:'isolated'}})
+    // json文件中： {styleIsolation:'isolated'}
+    // isolated ：启用样式隔离，页面、组件不影响
+    // apply-shared ：页面wxss影响组件
+    // shared ：互相影响
+
+    // this.data === this.properties
+
+    // options:{pureDataPattern:/^_/} 定义纯数据字段
+
+    // 父子组件通信
+    // 1、属性绑定 count="{{count}}" properties:{count:Number}
+    // 2、事件绑定 this.triggerEvent('sync', { val: this.properties.count }) bind:sync="" 接收 e.detail.val
+    // 3、const child = this.selectComponent('.a/#a')获取子组件实例对象  child.setData({})
+
+    //  "independent":true // 独立分包
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,5 @@
+<!--pages/info/info.wxml-->
+<text>pages/info/info.wxml11</text>
+<view>kkkk</view>
+<navigator open-type="navigateBack" delta="1">返回上一页</navigator>
+<navigator url="/pages/doc/doc?name=zhang&age=18" open-type="navigate">导航到doc页面</navigator>

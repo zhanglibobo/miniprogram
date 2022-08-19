@@ -1,0 +1,16 @@
+<!--components/test1.wxml-->
+
+<view>{{n1}}</view>
+<view>{{n2}}</view>
+<view>{{sum}}</view>
+<button bindtap="add1">n1+1</button>
+<button bindtap="add2">n2+1</button>
+<view style="background-color: rgb({{fullcolor}});" class="colorBox">
+    {{fullcolor}}
+</view>
+<button bindtap="addRgb" data-name="R">r</button>
+<button bindtap="addRgb" data-name="G">g</button>
+<button bindtap="addRgb" data-name="B">b</button>
+<view>-----{{_rgb.r}}</view>
+<view>-----{{_rgb.g}}</view>
+<view>-----{{_rgb.b}}</view>

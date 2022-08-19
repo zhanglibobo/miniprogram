@@ -1,0 +1,6 @@
+<!--pages/componentself/componentself.wxml-->
+<my-test1 max="10"></my-test1>
+<my-test2>
+    <view>hhh</view>
+</my-test2>
+<my-test4></my-test4>

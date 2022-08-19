@@ -1,0 +1,40 @@
+/* pages/home/home.wxss */
+swiper-item {
+    height: 350rpx;
+}
+swiper-item image {
+    width: 100%;
+    height: 100%;
+}
+.grid-list {
+    display: flex;
+    flex-wrap: wrap;
+    border-top: 1rpx solid #ccc;
+    border-left: 1rpx solid #ccc;
+}
+.grid-item {
+    width: 33.33%;
+    height: 200rpx;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-right: 1rpx solid #ccc;
+    border-bottom: 1rpx solid #ccc;
+    box-sizing: border-box;
+}
+.grid-item image{
+    width: 60rpx;
+    height: 60rpx;
+    margin-bottom: 10rpx;
+}
+.img-box {
+    width: 90%;
+    margin: 10rpx auto;
+}
+.img-box image {
+    width: 45%;
+}
+.img-box image:nth-child(2){
+    float: right;
+}

@@ -1,0 +1,11 @@
+<!--pages/contact/contact.wxml-->
+<van-button type="default">默认按钮</van-button>
+<van-button type="primary">主要按钮</van-button>
+<van-button type="info">信息按钮</van-button>
+<van-button type="warning">警告按钮</van-button>
+<navigator url="/pages/doc/doc" open-type="navigate">到doc页面</navigator>
+<navigator url="/pages/info/info" open-type="navigate">到info页面</navigator>
+<view>---------</view>
+<van-button type="danger" bindtap="getInfo">危险按钮</van-button>
+<view>---------</view>
+<van-button type="danger" bindtap="toChild">到分包页面</van-button>

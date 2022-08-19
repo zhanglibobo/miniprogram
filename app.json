@@ -1,0 +1,58 @@
+{
+    "pages": [
+        "pages/home/home",
+        "pages/componentself/componentself",
+        "pages/contact/contact",
+        "pages/shopList/shopList",
+        "pages/doc/doc",
+        "pages/info/info"
+    ],
+    "subPackages": [{
+        "root": "packageA",
+        "name": "pA",
+        "pages": [
+            "pages/childPage/childPage"
+        ]
+    }],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#ff0000",
+        "navigationBarTitleText": "Weixin",
+        "navigationBarTextStyle": "white",
+        "enablePullDownRefresh": true
+    },
+    "usingComponents": {
+        "my-test2": "/components/test2/test2"
+    },
+    "tabBar": {
+        "custom": true,
+        "list": [{
+                "pagePath": "pages/home/home",
+                "text": "首页",
+                "iconPath": "icon/_home.png",
+                "selectedIconPath": "icon/home.png"
+            },
+            {
+                "pagePath": "pages/componentself/componentself",
+                "text": "信息",
+                "iconPath": "icon/_search.png",
+                "selectedIconPath": "icon/search.png"
+            },
+            {
+                "pagePath": "pages/contact/contact",
+                "text": "联系我们",
+                "iconPath": "icon/_img.png",
+                "selectedIconPath": "icon/img.png"
+            }
+        ],
+        "color": "#cccccc",
+        "selectedColor": "#ff9400"
+    },
+    "sitemapLocation": "sitemap.json",
+    "preloadRule": {
+        "pages/contact/contact": {
+            "network": "all",
+            "packages": ["pA"]
+        }
+    }
+}

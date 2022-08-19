@@ -1,0 +1,6 @@
+<!--components/test4/test4.wxml-->
+<text>components/test4/test4.wxml</text>
+<view>{{userName}}</view>
+<button bindtap="getName">改变behavior中的姓名</button>
+<view>{{inputVal}}=======</view>
+<input model:value="{{inputVal}}" bindinput="fakeCallback" />

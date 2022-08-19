@@ -1,0 +1,14 @@
+ function toStr(str) {
+     return str + '___'
+ }
+
+ function fomater(str) {
+     var arr = str.split('');
+     arr.splice(3, 0, '-')
+     arr.splice(8, 0, '-')
+     return arr.join('')
+ }
+ module.exports = {
+     toStr: toStr,
+     fomater: fomater
+ }

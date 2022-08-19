@@ -1,0 +1,6 @@
+<!--components/test2/test2.wxml-->
+<view>--------test2.wxml</view>
+<slot></slot>
+<view>父组件count{{count}}</view>
+<my-test3 count="{{count}}" bind:sync="syncCont" class="cusA" id="cA"></my-test3>
+<button bindtap="getChild">获取子组件实例</button>

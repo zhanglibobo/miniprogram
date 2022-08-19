@@ -1,0 +1,10 @@
+/* pages/doc/doc.wxss */
+.color {
+    height: 200rpx;
+    border: 1rpx solid #ccc;
+    text-align: center;
+    margin: 15rpx;
+    text-shadow: 0rpx 0rpx 5rpx #fff;
+    box-shadow: 1rpx 1rpx 6rpx #aaa;
+    line-height: 200rpx;
+}
